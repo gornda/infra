@@ -1,0 +1,4 @@
+project = "project_id"
+public_key_path = "path_to_public_key"
+private_key_path = "path_to_private_key"
+disk_image = "image_name"
