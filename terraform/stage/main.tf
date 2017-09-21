@@ -16,6 +16,6 @@ module "db" {
 }
 
 module "vps" {
-  source = "../modules/vps"
+  source        = "../modules/vps"
   source_ranges = ["0.0.0.0/0"]
 }
