@@ -28,4 +28,4 @@ Usage:
    4. ```cd ~/infra/ansible```
    5. Use ```ansible-playbook -i environments/<environment>/hosts site.yml --check``` to check future changes. By default stage environment will be selected.
    6. Use ```ansible-playbook -i environments/<environment>/hosts site.yml``` to configure instances and deploy sample application.
-   7. Type <APP external IP>:9292 in your browser. Sample application will appear.
+   7. Type "APP external IP":9292 in your browser. Sample application will appear.
