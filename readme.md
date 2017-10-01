@@ -1,6 +1,6 @@
 # infra
 
-Educational repository. Provide several ways to prepare infrastructure (Ruby, MongoDB and Puma) and deploy sample app.
+Educational repository. It provides several ways to prepare infrastructure (Ruby, MongoDB and Puma) and deploy sample app.
 
 Preconditions:
 * valid google cloud platform account and active project.
@@ -13,7 +13,7 @@ Preconditions:
   ```packer build -var-file vars.json app.json``` &
   ```packer build -var-file vars.json db.json```
 
-2. Terraform to deploy instances and set firewall rules. There are two environments - stage and prod. Differense is in firewall settings (ssh access to stage is available from any IP address, ssh access is available only from specific IP).
+2. Terraform to deploy instances and set firewall rules. There are two environments - stage and prod. Difference is in firewall settings (ssh access to stage is available from any IP address, ssh access is available only from specific IP).
 Usage:
     1. ```cd ~/infra/terraform/stage``` or ```cd ~/infra/terraform/prod```
     2. Add file terraform.vars with correct settings (there is terraform.vars.example file in /terraform folder)
