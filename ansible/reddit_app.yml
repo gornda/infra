@@ -3,11 +3,11 @@
   hosts: all
   vars:
     mongo_bind_ip: 0.0.0.0
-    db_host: 10.132.0.3
+    db_host: 10.132.0.2
   tasks:
     - name: Change mongo config file
       become: true
-      template: 
+      template:
         src: templates/mongod.conf.j2
         dest: /etc/mongod.conf
         mode: 0644
@@ -16,7 +16,7 @@
 
     - name: Add unit file for Puma
       become: true
-      copy: 
+      copy:
         src: files/puma.service
         dest: /etc/systemd/system/puma.service
       tags: app-tag
@@ -33,7 +33,7 @@
       systemd: name=puma enabled=yes
 
     - name: Fetch the latest version of application code
-      git: 
+      git:
         repo: 'https://github.com/Artemmkin/reddit.git'
         dest: /home/appuser/reddit
         version: monolith
@@ -41,7 +41,7 @@
       notify: restart puma
 
     - name: Bundle install
-      bundler: 
+      bundler:
         state: present
         chdir: /home/appuser/reddit
       tags: deploy-tag

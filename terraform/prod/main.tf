@@ -15,7 +15,7 @@ module "db" {
   db_disk_image   = "${var.db_disk_image}"
 }
 
-module "vps" {
-  source = "../modules/vps"
+module "vpс" {
+  source = "../modules/vpс"
   source_ranges = ["66.102.9.148/32"]
 }
