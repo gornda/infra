@@ -29,3 +29,21 @@ Usage:
    5. Use ```ansible-playbook -i environments/<environment>/hosts site.yml --check``` to check future changes. By default stage environment will be selected.
    6. Use ```ansible-playbook -i environments/<environment>/hosts site.yml``` to configure instances and deploy sample application.
    7. Type "APP external IP":9292 in your browser. Sample application will appear.
+
+4. Vagrant will configure APP and DB instances using Ansible. Run molecule tests.
+Usage:
+   1. Install Vagrant
+   2. ```cd ~/infra/ansible```
+   2. ```vagrant up```
+   3. Check if application is available on 10.10.10.20:9292 in your browser.
+   4. Use ```vagrant destroy -f``` to delete instances.
+
+5. Run tests for DB role.
+Usage:
+   1. ```cd ~/infra/ansible```
+   1. Install molecule and testinfra ```pip install -r requirements.txt```
+   1. ```cd ~/infra/ansible/roles/db```
+   2. ```molecule create```
+   3. ```molecule converge```
+   4. ```molecule verify```
+   5. Use ```molecule destroy``` to destroy test infrastructure.
