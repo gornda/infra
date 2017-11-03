@@ -4,3 +4,18 @@
 *.tfvars
 .terraform/
 *.retry
+# Vagrant
+.vagrant/
+*.logs
+*.log
+bin/
+lib/
+local/
+share/
+.molecule/
+.cache/
+__pycache__/
+ansible/ansible/
+ansible/*.log
+*.pyc
+
