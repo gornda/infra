@@ -17,3 +17,5 @@ share/
 __pycache__/
 ansible/ansible/
 ansible/*.log
+*.pyc
+
